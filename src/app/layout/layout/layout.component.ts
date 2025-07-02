@@ -1,6 +1,6 @@
 // layout.component.ts - Versión actualizada
 import { ChangeDetectionStrategy, Component, inject, OnInit, signal, computed } from '@angular/core';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterModule, RouterOutlet } from '@angular/router';
 import { ChangeLightDarkComponent } from "../../components/change-light-dark/change-light-dark.component";
 import { FooterComponent } from "../../components/footer/footer.component";
 import { Auth } from '../../services/auth';
@@ -9,7 +9,7 @@ import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-layout',
-  imports: [RouterOutlet, ChangeLightDarkComponent, FooterComponent, RouterLink, CommonModule],
+  imports: [RouterOutlet, ChangeLightDarkComponent, FooterComponent, RouterLink, CommonModule, RouterLinkActive, RouterModule],
   templateUrl: './layout.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
